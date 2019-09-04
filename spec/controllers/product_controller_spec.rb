@@ -90,34 +90,3 @@ describe ProductsController do
 
   end
 end
-
-
-
-      # describe 'PUT #update' do
-      #       let(:id) { '1'}
-      #          it 'update product' do
-      #         params={name: "dsfasf"}
-      #         put :update, params:{id: id, operation: params}
-      #         expect(response.status).to eq 200
-      #         # expect(product.name). eql params[:name]
-      #       end
-      #     end
-    # describe 'PUT #update' do
-    #   let(:id) { '1'}
-    #      it 'update product' do
-    #      header={'Authorization:'=> "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1Njc1MTQ0NTF9.C3kSGdX9NEaDpSIPyRO0uWTpTXx193LjtwOV9sBicKI"}
-    #     params={name: "dsfasf"}
-    #     put :update, params:{id: id, operation: params}
-    #     expect(response.status).to eq 200
-    #     # expect(product.name). eql params[:name]
-    #   end
-    # end
-# @product = Product.find(params[:id])
-    # describe 'DELETE #destroy' do
-    #   before {delete :destroy }
-    #   it 'delete producy' do
-    #     expect(response.status).to eq 200
-    #   end
-    # end
-
-  # end
