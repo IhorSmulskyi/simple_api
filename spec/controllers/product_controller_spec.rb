@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'pry'
 
 describe ProductsController do
-  let!(:user) {User.create(email: "ihor3@gmail.com", password: "123456")}
+  let!(:user) { FactoryBot.create(:user) }
   let!(:product) {Product.create( name: "OLD_LAMP")}
   let(:id) {product.id}
 
@@ -45,7 +45,9 @@ describe ProductsController do
   # end
 
   describe 'authenticate user' do
+
     before(:each) { authWithUser(user) }
+
     describe 'GET #index' do
       before{ get :index}
       it 'show products' do

@@ -33,6 +33,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'rspec_api_documentation', github: 'zipmark/rspec_api_documentation'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -43,7 +44,7 @@ group :development do
   gem 'rspec-rails'
   gem 'rspec_api_documentation', github: 'zipmark/rspec_api_documentation'
   gem 'pry', '~> 0.12.2'
-  gem 'factory_bot'
+
 end
 
 

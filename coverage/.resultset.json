@@ -206,6 +206,14 @@
         null,
         null
       ],
+      "/home/ihor/proba/simple_api/spec/factories/user.rb": [
+        1,
+        1,
+        6,
+        6,
+        null,
+        null
+      ],
       "/home/ihor/proba/simple_api/config/routes.rb": [
         1,
         1,
@@ -330,7 +338,9 @@
         null,
         null,
         1,
+        null,
         6,
+        null,
         1,
         2,
         1,
@@ -379,6 +389,8 @@
       "/home/ihor/proba/simple_api/spec/rails_helper.rb": [
         null,
         1,
+        1,
+        null,
         1,
         1,
         null,
@@ -629,6 +641,6 @@
         null
       ]
     },
-    "timestamp": 1567680691
+    "timestamp": 1567685911
   }
 }
