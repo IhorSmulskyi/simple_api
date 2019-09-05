@@ -43,6 +43,7 @@ group :development do
   gem 'rspec-rails'
   gem 'rspec_api_documentation', github: 'zipmark/rspec_api_documentation'
   gem 'pry', '~> 0.12.2'
+  gem 'factory_bot'
 end
 
 

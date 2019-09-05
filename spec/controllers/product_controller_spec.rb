@@ -2,9 +2,10 @@ require 'rails_helper'
 require 'pry'
 
 describe ProductsController do
-
+  let!(:user) {User.create(email: "ihor3@gmail.com", password: "123456")}
   let!(:product) {Product.create( name: "OLD_LAMP")}
   let(:id) {product.id}
+
   # describe 'before authenticate' do
 
   #   describe 'POST #create' do
@@ -44,8 +45,7 @@ describe ProductsController do
   # end
 
   describe 'authenticate user' do
-
- before{ get '/products', params: {}, headers: { 'HTTP_ACCEPT' => "application/json",  "Authorization": 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1Njc1MTQ0NTF9.C3kSGdX9NEaDpSIPyRO0uWTpTXx193LjtwOV9sBicKI' }}
+    before(:each) { authWithUser(user) }
     describe 'GET #index' do
       before{ get :index}
       it 'show products' do
