@@ -6,51 +6,15 @@ describe ProductsController do
   let!(:product) {Product.create( name: "OLD_LAMP")}
   let(:id) {product.id}
 
-  # describe 'before authenticate' do
-
-  #   describe 'POST #create' do
-  #     before {post :create}
-  #     it 'Unauthorized' do
-  #       expect(response.status).to eq 401
-  #     end
-  #   end
-
-    # describe 'PUT #update' do
-    #   before {put :update, params: { name: 'tel' } }
-    #   it 'Unauthorized' do
-    #     expect(response.s)
-  # describe 'before authenticate' do
-
-  #   describe 'POST #create' do
-  #     before {post :create}
-  #     it 'Unauthorized' do
-  #       expect(response.status).to eq 401
-  #     end
-  #   end
-
-    # describe 'PUT #update' do
-    #   before {put :update, params: { name: 'tel' } }
-    #   it 'Unauthorized' do
-    #     expect(response.status).to eq 401
-    #   end
-    # end
-
-    # describe 'DELETE #destroy' do
-    #   before {delete :destroy }
-    #   it 'Unauthorized' do
-    #     expect(response.status).to eq 401
-    #   end
-    # end
-
-  # end
-
   describe 'authenticate user' do
 
     before(:each) { authWithUser(user) }
 
     describe 'GET #index' do
+
       before{ get :index}
       it 'show products' do
+        binding.pry
         expect(response.status).to eq 200
         expect(Product.count).to eq 1
       end
@@ -92,3 +56,40 @@ describe ProductsController do
 
   end
 end
+# describe 'before authenticate' do
+
+  #   describe 'POST #create' do
+  #     before {post :create}
+  #     it 'Unauthorized' do
+  #       expect(response.status).to eq 401
+  #     end
+  #   end
+
+    # describe 'PUT #update' do
+    #   before {put :update, params: { name: 'tel' } }
+    #   it 'Unauthorized' do
+    #     expect(response.s)
+  # describe 'before authenticate' do
+
+  #   describe 'POST #create' do
+  #     before {post :create}
+  #     it 'Unauthorized' do
+  #       expect(response.status).to eq 401
+  #     end
+  #   end
+
+    # describe 'PUT #update' do
+    #   before {put :update, params: { name: 'tel' } }
+    #   it 'Unauthorized' do
+    #     expect(response.status).to eq 401
+    #   end
+    # end
+
+    # describe 'DELETE #destroy' do
+    #   before {delete :destroy }
+    #   it 'Unauthorized' do
+    #     expect(response.status).to eq 401
+    #   end
+    # end
+
+  # end
