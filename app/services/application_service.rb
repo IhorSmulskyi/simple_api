@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationService
   # AuthenticateUser.call(arg)
 
@@ -27,6 +29,6 @@ class ApplicationService
   end
 
   def call
-    fail NotImplementedError unless defined?(super)
+    raise NotImplementedError unless defined?(super)
   end
 end

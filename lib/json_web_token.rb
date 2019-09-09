@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class JsonWebToken
   SECRET = Rails.application.credentials.secret_key_base
   def self.encode(payload, exp = 24.hours.from_now)
@@ -10,7 +12,7 @@ class JsonWebToken
     HashWithIndifferentAccess.new(body)
   rescue JWT::ExpiredSignature
     nil
-  rescue
+  rescue StandardError
     nil
   end
 end

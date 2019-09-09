@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Errors < Hash
   def add(key, value, _opts = {})
     self[key] ||= []
