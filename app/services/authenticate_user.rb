@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticateUser < ApplicationService
   def initialize(email, password)
     @email = email
@@ -15,6 +17,7 @@ class AuthenticateUser < ApplicationService
   def user
     user = User.find_by(email: email)
     return user if user&.authenticate(password)
+
     errors.add :user_authentication, 'invalid credentials'
   end
 end

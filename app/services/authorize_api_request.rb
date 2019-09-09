@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthorizeApiRequest < ApplicationService
   attr_reader :headers
 
@@ -26,6 +28,7 @@ class AuthorizeApiRequest < ApplicationService
     else
       errors.add(:token, 'missing token')
     end
+
     nil
   end
 end
